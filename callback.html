@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ads API OAuth Callback</title>
+</head>
+<body>
+    <h3>OAuth 回调接收页面</h3>
+    <div id="params"></div>
+    <script>
+        // 读取URL里的code参数并展示
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        document.getElementById("params").innerText = "Authorization Code：" + code;
+    </script>
+</body>
+</html>
